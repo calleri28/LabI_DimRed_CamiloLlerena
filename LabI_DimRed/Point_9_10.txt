@@ -1,0 +1,33 @@
+9. What are the underlying mathematical principles behind UMAP? What is it useful for?
+
+UMAP (Uniform Manifold Approximation and Projection) is a non-linear dimensionality reduction technique that 
+is often used for visualizing high-dimensional data. The mathematical principles behind UMAP are based on a 
+combination of graph theory, topology, and optimization.
+At its core, UMAP constructs a graph representation of the high-dimensional data, where each data point is 
+a node in the graph, and edges are defined between nearby points. This graph is then transformed into a 
+lower-dimensional space, while preserving the global structure of the original data. The transformation is 
+achieved by minimizing the distance between the original graph and the transformed graph, subject to 
+constraints that ensure that the lower-dimensional representation is smooth and well-distributed.
+UMAP's optimization objective is based on minimizing the cross-entropy between two probability 
+distributions: one that describes the pairwise similarities between the original high-dimensional data points, 
+and another that describes the pairwise similarities between the corresponding points in the 
+lower-dimensional representation. This objective function can be efficiently optimized using stochastic 
+gradient descent, which allows UMAP to scale to very large datasets.
+UMAP has a wide range of applications, including visualizing high-dimensional data, clustering, anomaly 
+detection, and feature selection. It is particularly useful in exploratory data analysis and data 
+visualization, as it can reveal patterns and relationships in high-dimensional data that are difficult to 
+discern using other methods.
+
+
+10. What are the underlying mathematical principles behind LDA? What is it useful for?
+LDA (Linear Discriminant Analysis) is a statistical method for finding a linear combination of features that 
+can be used to distinguish between two or more classes. The mathematical principles behind LDA are based on 
+linear algebra, probability theory, and statistical inference.
+At its core, LDA seeks to find a projection of the data onto a lower-dimensional space that maximizes the 
+separation between the classes. This is achieved by computing the between-class scatter matrix and the 
+within-class scatter matrix, and then finding a projection that maximizes the ratio of the between-class 
+variance to the within-class variance.
+The between-class scatter matrix measures the variability between the means of the different classes, while 
+the within-class scatter matrix measures the variability within each class. By maximizing the ratio of these 
+two measures, LDA is able to find a projection that maximizes the separation between the classes in the 
+lower-dimensional space.
